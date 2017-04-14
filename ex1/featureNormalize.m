@@ -26,10 +26,12 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
-
-
-
-
+for i= 1:size(X_norm, 2)
+  mu(1, i) = mean(X_norm(:, i));
+  X_norm(:, i) = X_norm(:, i) - ones(rows(X_norm), 1) * mu(1, i);
+  sigma(1, i) = std(X_norm(:, i));
+  X_norm(:, i) = X_norm(:, i) ./ (ones(rows(X_norm), 1) * sigma(1, i));
+end
 
 
 
