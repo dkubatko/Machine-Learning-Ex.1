@@ -53,7 +53,6 @@ pause;
 
 X = [ones(m, 1), data(:,1)]; % Add a column of ones to x
 theta = zeros(2, 1); % initialize fitting parameters
-disp X
 % Some gradient descent settings
 iterations = 1500;
 alpha = 0.01;
@@ -66,7 +65,7 @@ fprintf('Expected cost value (approx) 32.07\n');
 
 % further testing of the cost function
 J = computeCost(X, y, [-1 ; 2]);
-fprintf('\nWith theta = [-1 ; 2]\nCost computed = %f\n', J);
+fprintf('\nWith theta = [-1 ; 2]\n Cost computed = %f\n', J);
 fprintf('Expected cost value (approx) 54.24\n');
 
 fprintf('Program paused. Press enter to continue.\n');
